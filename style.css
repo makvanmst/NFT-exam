@@ -5,13 +5,10 @@
   }
   
   :root {
-    --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
     --CyanBg: hsl(178, 100%, 50%, 0.5);
     --mainBG: hsl(217, 54%, 11%);
     --cardBG: hsl(216, 50%, 16%);
     --line: hsl(215, 32%, 27%);
-    --White: hsl(0, 0%, 100%);
   }
   
   body {
@@ -51,13 +48,14 @@
     position: relative;
     width: 100%;
     height: 17.5rem;
-    background-image: url('exam-second/images/image-equilibrium.jpg');
+    background-image: url('images/image-equilibrium.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 0.6rem;
     cursor: pointer;
     z-index: 1;
+    transition: .5s ease;
   }
   
   .card-content .card-img::after {
@@ -86,7 +84,7 @@
     right: 0;
     bottom: 0;
     transform: translate(-50%, -50%);
-    background-image: url('exam-second/images/icon-view.svg');
+    background-image: url('images/icon-view.svg');
     background-repeat: no-repeat;
     background-position: center;
     z-index: 3;
@@ -94,8 +92,8 @@
     transition: all 0.5s;
   }
   
-  .card-content .card-img:hover::after,
-  .card-content .card-img:hover::before {
+  .card-content:hover .card-img::after,
+  .card-content:hover .card-img::before {
     opacity: 1;
   }
   
@@ -106,12 +104,12 @@
   
   .card-details .title a {
     font-size: 1.3rem;
-    color: var(--White);
+    color: hsl(0, 0%, 100%);
     transition: all 0.5s;
   }
   
   .card-details .title a:hover {
-    color: var(--Cyan);
+    color: hsl(178, 100%, 50%);
   }
   
   .card-details .desc {
@@ -119,7 +117,7 @@
     font-size: 1rem;
     font-weight: 100;
     line-height: 1.5;
-    color: var(--Soft-blue);
+    color: hsl(215, 51%, 70%);
   }
   
   .card-overlay {
@@ -137,20 +135,20 @@
     border-bottom: 1px solid var(--line);
   }
   
-  .card-overlay .card-day {
+  .card-overlay .card-time {
     display: flex;
     align-items: center;
     font-size: 0.8rem;
-    color: var(--Soft-blue);
+    color: hsl(215, 51%, 70%);
   }
   
-  .card-overlay .card-day h2 {
+  .card-overlay .card-time h2 {
     font-size: 0.9rem;
     font-weight: 400;
     margin-left: 0.5rem;
   }
   
-  .card-overlay .card-day:first-child h2 {
+  .card-overlay .card-time:first-child h2 {
     font-weight: 600;
     color: var(--Cyan);
   }
@@ -167,7 +165,7 @@
   }
   
   .card-author .author-img img {
-    border: 1px solid var(--White);
+    border: 1px solid hsl(0, 0%, 100%);
     border-radius: 50%;
   }
   
@@ -181,14 +179,14 @@
   .card-author .author-details h3 {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--Soft-blue);
+    color: hsl(215, 51%, 70%);
   }
   
   .card-author .author-details .name {
-    color: var(--White);
+    color: hsl(0, 0%, 100%);
     transition: all 0.5s;
   }
   
   .card-author .author-details .name:hover {
-    color: var(--Cyan);
+    color: hsl(178, 100%, 50%);
   }
